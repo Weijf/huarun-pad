@@ -1,0 +1,336 @@
+<ion-view id="clue_info" view-title="详情页" cache-view="true">
+
+    <!--题头-->
+    <ion-header-bar align-title="center" style="" class="bar-energized" id="header-bar">
+        <button ng-click="goBack()" class="button button-icon ion-ios-arrow-left"></button>
+        <h1 class="title">{{title}}</h1>
+    </ion-header-bar>
+
+    <ion-content scroll="false" has-header="true">
+
+        <div class="scroll-list">
+            <a class="scroll-a {{items.class}}" ng-repeat="items in itemList" id="{{items.id}}" ng-click="show_slide(items.id)">
+                {{items.name}}
+            </a>
+        </div>
+
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="last">
+            <ion-slide>
+                <ion-content>
+                    <div ng-repeat="items in surveyList">
+                        <div class="card">
+                            <!--概况标题-->
+                            <div class="item item-divider item_head card-head" ng-click="show_survey({{items.id}})" >
+                                <img class="card-img" ng-src="{{items.img}}">
+                                <div class="head-title">
+                                    {{items.title}}
+                                </div>
+                                <div>
+                                    <img style="float: left;height: 20px;width: 20px; right: ;" ng-src="{{items.state_img}}">
+                                </div>
+                            </div>
+                            <!--概况标题具体内容-->
+                            <div class="list" ng-show="!items.state" ng-repeat="item in tableInfo">
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行人员：</span>
+                                    <div class="tableInfo-title">{{item.name}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行机构：</span>
+                                    <div class="tableInfo-title">{{item.org}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行结果：</span>
+                                    <div class="tableInfo-title" style="color: #eeb81a;">{{item.result}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行时间：</span>
+                                    <div class="tableInfo-title">{{item.time}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label" style="width: 82px;">耗时(小时)：</span>
+                                    <div class="tableInfo-title">{{item.consuming}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行状态：</span>
+                                    <div class="tableInfo-title" style="color: #eeb81a;">{{item.state}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行进度：</span>
+                                    <div class="tableInfo-title">{{item.speed}}</div>
+                                </label>
+                                <label class="item item-input label_item">
+                                    <span class="input-label">执行意见：</span>
+                                    <div class="tableInfo-title">{{item.opinion}}</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div">
+                    </div>
+                </ion-content>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-content>
+
+                    <div class="card" ng-repeat="items in infor_one">
+
+                        <!--概况标题-->
+                        <div class="item item-divider item_head card-head" ng-click="show_information({{items.id}})" >
+                            <div style="float: left;">{{items.title}}</div>
+                            <div>
+                                <img style="float: left;height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+                            </div>
+                        </div>
+
+                        <!--概况标题具体内容-->
+                        <!--线索查询-->
+                        <div class="list" ng-repeat="item in infor_one_info" ng-show="!items.state&&!item.state">
+                            <label class="item item-input label_item">
+                                <span class="input-label">线索标题：</span>
+                                <div class="tableInfo-title">{{item.title}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">管理人员：</span>
+                                <div class="tableInfo-title">{{item.name}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">管理部门：</span>
+                                <div class="tableInfo-title">{{item.department}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">联系方式：</span>
+                                <div class="tableInfo-title">{{item.phone}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">创建时间：</span>
+                                <div class="tableInfo-title">{{item.time}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">线索背景：</span>
+                                <div class="tableInfo-title">{{item.background}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">线索内容：</span>
+                                <div class="tableInfo-title">{{item.content}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">线索价值：</span>
+                                <div class="tableInfo-title">{{item.value}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">审核领导：</span>
+                                <div class="tableInfo-title">{{item.leader}}</div>
+                            </label>
+                        </div>
+
+                        <!--机会查询-->
+                        <div class="list" ng-repeat="item in infor_two_info" ng-show="!items.state&&!item.state">
+                            <label class="item item-input label_item">
+                                <span class="input-label">机会标题：</span>
+                                <div class="tableInfo-title">{{item.title}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">机会类型：</span>
+                                <div class="tableInfo-title">{{item.type}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">紧急程度：</span>
+                                <div class="tableInfo-title">{{item.degree}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">管理部门：</span>
+                                <div class="tableInfo-title">{{item.department}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">管理人员：</span>
+                                <div class="tableInfo-title">{{item.name}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">联系方式：</span>
+                                <div class="tableInfo-title">{{item.phone}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">创建时间：</span>
+                                <div class="tableInfo-title">{{item.time}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">机会描述：</span>
+                                <div class="tableInfo-title">{{item.content}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">关联线索：</span>
+                                <div class="tableInfo-title">{{item.clue}}</div>
+                            </label>
+                        </div>
+
+                        <!--项目查询-->
+                        <div class="list" ng-repeat="item in infor_thr_info" ng-show="!items.state&&!item.state">
+                            <label class="item item-input label_item">
+                                <span class="input-label">项目名称：</span>
+                                <div class="tableInfo-title">{{item.title}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">项目编号：</span>
+                                <div class="tableInfo-title">{{item.num}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">项目规模：</span>
+                                <div class="tableInfo-title">{{item.scale}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">项目类型：</span>
+                                <div class="tableInfo-title">{{item.type}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">项目经理：</span>
+                                <div class="tableInfo-title">{{item.leader}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">管理部门：</span>
+                                <div class="tableInfo-title">{{item.department}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">联系方式：</span>
+                                <div class="tableInfo-title">{{item.phone}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">关联机会：</span>
+                                <div class="tableInfo-title">{{item.opport}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">紧急程度：</span>
+                                <div class="tableInfo-title">{{item.degree}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">合同金额(元)：</span>
+                                <div class="tableInfo-title">{{item.money}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">合同签署时间：</span>
+                                <div class="tableInfo-title">{{item.time}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">项目描述：</span>
+                                <div class="tableInfo-title">{{item.content}}</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card" ng-repeat="items in infor_two">
+
+                        <!--协同方信息-->
+                        <div class="item item-divider item_head card-head" ng-click="show_information({{items.id}})" >
+                            <div>{{items.title}}</div>
+                            <div>
+                                <img style="height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+                            </div>
+                        </div>
+                        <div class="list" ng-show="!items.state" ng-repeat="item in infor_coor_info">
+                            <label class="item item-input label_item">
+                                <span class="input-label">协同机构：</span>
+                                <div class="tableInfo-title">{{item.department}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label" style="width: 84px;">协同接口人：</span>
+                                <div class="tableInfo-title">{{item.name}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">合作伙伴：</span>
+                                <div class="tableInfo-title">{{item.part}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label" style="width:  126px;">利益分配比例(%)：</span>
+                                <div class="tableInfo-title">{{item.prop}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label" style="width:  102px;">协同内容描述：</span>
+                                <div class="tableInfo-title">{{item.content}}</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card" ng-repeat="items in infor_thr">
+
+                        <!--资料附件信息-->
+                        <div class="item item-divider item_head card-head" ng-click="show_information({{items.id}})" >
+                            <div>{{items.title}}</div>
+                            <div>
+                                <img style="height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+                            </div>
+                        </div>
+                        <div class="item item-text-wrap" ng-show="!items.state" ng-repeat="item in infor_data_info">
+                            <label class="item item-input label_item" ng-click="downfile(item.url);">
+                                <span class="input-label">文件名称：</span>
+                                <div class="tableInfo-title">{{item.name}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">上传人员：</span>
+                                <div class="tableInfo-title">{{item.person}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">上传部门：</span>
+                                <div class="tableInfo-title">{{item.department}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">上传时间：</span>
+                                <div class="tableInfo-title">{{item.time}}</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="div">
+                    </div>
+                </ion-content>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-content>
+                    <!--协同方信息-->
+                    <div class="card" ng-repeat="items in infor_for">
+                        <div class="item item-divider item_head card-head" ng-click="show_work()" >
+                            <div style="float: left;">{{items.title}}</div>
+                            <div>
+                                <img style="float: left;height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+                            </div>
+                        </div>
+                        <div class="list" ng-repeat="item in infor_work_info" ng-show="!items.state">
+                            <label class="item item-input label_item">
+                                <span class="input-label">活动标题：</span>
+                                <div class="tableInfo-title">{{item.title}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">活动编号：</span>
+                                <div class="tableInfo-title">{{item.num}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">活动类型：</span>
+                                <div class="tableInfo-title">{{item.type}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">执行时间：</span>
+                                <div class="tableInfo-title">{{item.time}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">执行部门：</span>
+                                <div class="tableInfo-title">{{item.department}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">执行人员：</span>
+                                <div class="tableInfo-title">{{item.person}}</div>
+                            </label>
+                            <label class="item item-input label_item">
+                                <span class="input-label">记录人员：</span>
+                                <div class="tableInfo-title">{{item.record}}</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="div">
+                    </div>
+                </ion-content>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

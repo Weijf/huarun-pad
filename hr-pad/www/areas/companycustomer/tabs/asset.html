@@ -1,0 +1,22 @@
+<ion-content id="companyCustomerInfoChild" ng-controller="companyCustomerInfoCtrl">
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in assets">
+            <div class="cus-basic-info">
+                <em>资产编号:</em>
+                <em>{{info.no}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>资产类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>资产评估价值（万元）:</em>
+                <em>{{info.money}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>资产描述:</em>
+                <em>{{info.desc}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

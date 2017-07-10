@@ -1,0 +1,26 @@
+#demo .scroll-div{
+    border-bottom: 5px solid #F0F0F0;
+}
+
+#demo .scroll-list{
+    white-space: nowrap;
+}
+
+#demo .scroll{
+    height: 100%;
+}
+
+#demo .slider-pager{
+    display: none;
+}
+
+#demo .scroll-a{
+    padding: 10px;
+    display: inline-block;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+#demo .action{
+    border-bottom: 2px solid #6a3906;
+    color: #6a3906;
+}

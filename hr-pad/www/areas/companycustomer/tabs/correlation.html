@@ -1,0 +1,18 @@
+<ion-content id="companyCustomerInfoChild" ng-controller="companyCustomerInfoCtrl">
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in correlations">
+            <div class="cus-basic-info">
+                <em>关联方名称:</em>
+                <em>{{info.name}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>关联方类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>关联方编号:</em>
+                <em>{{info.no}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

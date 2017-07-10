@@ -1,0 +1,57 @@
+<ion-view id="index" view-title="首页" cache-view="true">
+	<!--题头-->
+	<ion-header-bar align-title="left" class="bar-energized header-bar">
+		<div class="header-div" style="left: 0px;" ng-click="show_list()">
+			<div class="left"></div>
+		</div>
+		<div class="header-title">
+			<img class="logo" src="img/index/logo.png">
+			<span style="display:inline; color: #FFFFFF; font-size: 18px;">金圆集团</span>
+		</div>
+		<div class="header-div" style="right: 0px;" ng-click="show_list()">
+			<div class="right"></div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content id="home-content" overflow-scroll="true" class="scroll-content" scroll="true">
+		<!--头部背景图-->
+		<img src="img/index/back.png" class="back">
+		<!--问候语-->
+		<div class="greet">您好！</div>
+
+		<!-- 功能导航 -->
+		<nav id="nav">
+			<span ui-sref="{{item.href}}" ng-repeat="item in nav_list">
+				<img class="nav-img" ng-src="{{item.img_src}}" alt="">
+				<h2>{{item.title}}</h2>
+			</span>
+			<span ui-sref="moremenu">
+				<img style="display: block;width: 26px;height: 26px;margin: 30px auto 0px auto;" ng-src="img/index/nav7.png" alt="">
+			</span>
+		</nav>
+
+		<!--待办事项-->
+		<div class="floor">
+			<div class="floor-head">
+				<img src="img/index/todo.png" class="floor-img">
+				<span class="floor-title">待办事项</span>
+			</div>
+
+			<ion-list>
+				<ion-item class="todo-item" ng-repeat="item in todo_list" ng-click="func_msgClick(item)">
+					<div class="todo-time">
+						<div class="todo-time-div">{{item.time}}</div>
+						<div class="todo-time-div">{{item.year}}</div>
+					</div>
+					<div class="todo-state" style="background-color: {{item.color}}">
+
+					</div>
+					<div class="todo-content">
+						<span class="con-title" style="color: #333333; font-size: 15px;">{{item.title}}</span>
+						<span class="con-title" style="color: #666666; font-size: 13px;">{{item.content}}</span>
+						<span class="con-title" style="color: #999999; font-size: 13px;">申请人：{{item.name}}</span>
+					</div>
+			</ion-list>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,217 @@
+<ion-slide ion-slide-tab-label="{{tab2}}信息" class="table">
+
+    <div class="card" ng-repeat="items in infor_one">
+
+        <!--概况标题-->
+        <div class="item item-divider item_head card-head" ng-click="show_information({{items.id}})" >
+            <div style="float: left;">{{items.title}}</div>
+            <div>
+                <img style="float: left;height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+            </div>
+        </div>
+
+        <!--概况标题具体内容-->
+        <div class="item item-text-wrap" ng-if="!items.state">
+            <!--线索查询-->
+            <div class="item item-text-wrap" border="1" ng-repeat="item in infor_one_info" ng-if="!item.state">
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">线索标题：</div>
+                    <div class="tableInfo-title">{{item.title}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">管理人员：</div>
+                    <div class="tableInfo-title">{{item.name}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">管理部门：</div>
+                    <div class="tableInfo-title">{{item.department}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">联系方式：</div>
+                    <div class="tableInfo-title">{{item.phone}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">创建时间：</div>
+                    <div class="tableInfo-title">{{item.time}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">线索背景：</div>
+                    <div class="tableInfo-title">{{item.background}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">线索内容：</div>
+                    <div class="tableInfo-title">{{item.content}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">线索价值：</div>
+                    <div class="tableInfo-title">{{item.value}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">审核领导：</div>
+                    <div class="tableInfo-title">{{item.leader}}</div>
+                </div>
+            </div>
+
+            <!--机会查询-->
+            <div class="item item-text-wrap" border="1" ng-repeat="item in infor_two_info" ng-if="!item.state">
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">机会标题：</div>
+                    <div class="tableInfo-title">{{item.title}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">机会类型：</div>
+                    <div class="tableInfo-title">{{item.type}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">紧急程度：</div>
+                    <div class="tableInfo-title">{{item.degree}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">管理部门：</div>
+                    <div class="tableInfo-title">{{item.department}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">管理人员：</div>
+                    <div class="tableInfo-title">{{item.name}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">联系方式：</div>
+                    <div class="tableInfo-title">{{item.phone}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">创建时间：</div>
+                    <div class="tableInfo-title">{{item.time}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">机会描述：</div>
+                    <div class="tableInfo-title">{{item.content}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">关联线索：</div>
+                    <div class="tableInfo-title">{{item.clue}}</div>
+                </div>
+            </div>
+
+            <!--项目查询-->
+            <div class="item item-text-wrap" border="1" ng-repeat="item in infor_thr_info" ng-if="!item.state">
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">项目名称：</div>
+                    <div class="tableInfo-title">{{item.title}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">项目编号：</div>
+                    <div class="tableInfo-title">{{item.num}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">项目规模：</div>
+                    <div class="tableInfo-title">{{item.scale}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">项目类型：</div>
+                    <div class="tableInfo-title">{{item.type}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">项目经理：</div>
+                    <div class="tableInfo-title">{{item.leader}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">管理部门：</div>
+                    <div class="tableInfo-title">{{item.department}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">联系方式：</div>
+                    <div class="tableInfo-title">{{item.phone}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">关联机会：</div>
+                    <div class="tableInfo-title">{{item.opport}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">紧急程度：</div>
+                    <div class="tableInfo-title">{{item.degree}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">合同金额(元)：</div>
+                    <div class="tableInfo-title">{{item.money}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">合同签署时间：</div>
+                    <div class="tableInfo-title">{{item.time}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">项目描述：</div>
+                    <div class="tableInfo-title">{{item.content}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" ng-repeat="items in infor_two">
+
+        <!--协同方信息-->
+        <div class="item item-divider item_head card-head" ng-click="show_information({{items.id}})" >
+            <div>{{items.title}}</div>
+            <div>
+                <img style="height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+            </div>
+        </div>
+
+        <div class="item item-text-wrap" ng-if="!items.state">
+            <div class="item item-text-wrap" border="1" ng-repeat="item in infor_coor_info">
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">协同机构：</div>
+                    <div class="tableInfo-title">{{item.department}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name" style="width: 84px;">协同接口人：</div>
+                    <div class="tableInfo-title">{{item.name}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">合作伙伴：</div>
+                    <div class="tableInfo-title">{{item.part}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name" style="width:  126px;">利益分配比例(%)：</div>
+                    <div class="tableInfo-title">{{item.prop}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name" style="width:  102px;">协同内容描述：</div>
+                    <div class="tableInfo-title">{{item.content}}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card" ng-repeat="items in infor_thr">
+
+        <!--资料附件信息-->
+        <div class="item item-divider item_head card-head" ng-click="show_information({{items.id}})" >
+            <div>{{items.title}}</div>
+            <div>
+                <img style="height: 20px;width: 20px;" ng-src="{{items.state_img}}">
+            </div>
+        </div>
+
+        <div class="item item-text-wrap" ng-if="!items.state">
+            <div class="item item-text-wrap" border="1" ng-repeat="item in infor_data_info">
+                <div class="tableInfo-div" ng-click="downfile(item.url);">
+                    <div class="tableInfo-name">文件名称：</div>
+                    <div class="tableInfo-title">{{item.name}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">上传人员：</div>
+                    <div class="tableInfo-title">{{item.person}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">上传部门：</div>
+                    <div class="tableInfo-title">{{item.department}}</div>
+                </div>
+                <div class="tableInfo-div">
+                    <div class="tableInfo-name">上传时间：</div>
+                    <div class="tableInfo-title">{{item.time}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-slide>

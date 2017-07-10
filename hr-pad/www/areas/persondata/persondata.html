@@ -1,0 +1,113 @@
+<ion-view>
+    <div>
+        <ion-side-menus id="companydata">
+            <ion-side-menu-content drag-content="false">
+                <ion-header-bar class="bar-energized" style=""
+                                align-title="center">
+                    <button ng-click="goBack()" class="button button-icon ion-ios-arrow-back"></button>
+                    <h1 class="title">个人数据申请</h1>
+                    <button class="button button-icon ion-search" menu-toggle="right"></button>
+                </ion-header-bar>
+                <ion-content>
+                    <ion-list>
+                        <ion-item style="line-height: 30px">
+                            <div>
+                                <label>申请单号：</label>
+                                <label>25489454541545187</label>
+                            </div>
+                            <div>
+                                <label>法定名称：</label>
+                                <label>张三</label>
+                            </div>
+                            <div>
+                                <label>客户编号：</label>
+                                <label>77889911</label>
+                            </div>
+                            <div>
+                                <label>审批状态：</label>
+                                <label style="color: #ff8f00">已通过</label>
+                            </div>
+                            <ion-option-button class="" style="background-color: #fbc31f;color:#6a3906 ">
+                                <div style="width: 100%;">审批信息</div>
+                            </ion-option-button>
+                            <ion-option-button class="" style="background-color: #6a3906;color:#fbc31f">
+                                <div style="width: 100%;">客户信息</div>
+                            </ion-option-button>
+                        </ion-item>
+                        <ion-item style="line-height: 30px">
+                            <div>
+                                <label>申请单号：</label>
+                                <label>25489454541545187</label>
+                            </div>
+                            <div>
+                                <label>法定名称：</label>
+                                <label>张三</label>
+                            </div>
+                            <div>
+                                <label>客户编号：</label>
+                                <label>77889911</label>
+                            </div>
+                            <div>
+                                <label>审批状态：</label>
+                                <label style="color: #ff8f00">已通过</label>
+                            </div>
+                            <ion-option-button class="" style="background-color: #fbc31f;color:#6a3906 ">
+                                <div style="width: 100%;">审批信息</div>
+                            </ion-option-button>
+                            <ion-option-button class="" style="background-color: #6a3906;color:#fbc31f">
+                                <div style="width: 100%;">客户信息</div>
+                            </ion-option-button>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-side-menu-content>
+            <ion-side-menu side="right">
+                <ion-header-bar class="bar-energized" style=""
+                                align-title="center">
+                    <h1 class="title">筛选</h1>
+                </ion-header-bar>
+
+                <ion-content class="has-header" overflow-scroll="true">
+
+                    <div class="item item-input">
+                        <div class="input-label">
+                            申请单号：
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="item item-input">
+                        <div class="input-label">
+                            客户编号：
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="item item-input">
+                        <div class="input-label">
+                            客户法定名称：
+                        </div>
+                        <input type="text">
+                    </div>
+                    <div class="item item-input item-select">
+                        <div class="input-label">
+                            数据归属方：
+                        </div>
+                        <select>
+                            <option value="">全部</option>
+                        </select>
+                    </div>
+
+                </ion-content>
+                <ion-footer-bar style="height: 9%;padding: 0;">
+                    <button class=" "
+                            style="width: 50%;background-color: #6a3906;color:#fbc31f;border-width: 0"
+                            ng-click="func_ok()">重置
+                    </button>
+                    <button class=" "
+                            style="width: 50%;left: 50%;background-color: #fbc31f;color:#6a3906;border-width: 0 "
+                            ng-click="func_reset()">完成
+                    </button>
+                </ion-footer-bar>
+            </ion-side-menu>
+        </ion-side-menus>
+    </div>
+</ion-view>

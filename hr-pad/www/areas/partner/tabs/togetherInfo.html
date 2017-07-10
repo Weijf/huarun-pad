@@ -1,0 +1,32 @@
+<ion-view id="partnerInfoChild">
+    <ion-header-bar align-title="center" class="bar-energized" style="" id="header-bar">
+        <button ng-click="goBackInfo()" class="button button-icon ion-ios-arrow-left"></button>
+        <h1 class="title">合作事项信息</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="second_title">
+            <span class="label">合作事项基本信息</span>
+        </div>
+        <ion-list class="partner-base-info-list">
+            <ion-item class="partner-base-item" ng-repeat="basic in togetherBaseInfos">
+                <div class="partner-base-info">
+                    <label>{{basic.label}}:</label>
+                    <em>{{basic.info}}</em>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="second_title">
+            <span class="label">合作伙伴联系信息</span>
+        </div>
+        <ion-list class="partner-base-info-list">
+            <ion-item class="partner-base-item" ng-repeat="basic in togetherBaseRelationInfos">
+                <div class="partner-base-info">
+                    <label>{{basic.label}}:</label>
+                    <em>{{basic.info}}</em>
+                </div>
+            </ion-item>
+            <ion-item class="partner-base-item" >
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

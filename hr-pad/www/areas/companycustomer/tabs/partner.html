@@ -1,0 +1,22 @@
+<ion-content id="companyCustomerInfoChild" ng-controller="companyCustomerInfoCtrl">
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in partners">
+            <div class="cus-basic-info">
+                <em>股东名称:</em>
+                <em>{{info.name}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>实际出资金额（万元）:</em>
+                <em>{{info.money}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>持股比例（%）:</em>
+                <em>{{info.percent}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>控股股东标志:</em>
+                <em>{{info.sign}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

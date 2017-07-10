@@ -1,0 +1,53 @@
+<ion-slide ion-slide-tab-label="概况" class="table">
+    <div ng-repeat="item in surveyList">
+        <div class="card">
+            <!--概况标题-->
+            <div class="item item-divider item_head card-head" ng-click="show_survey({{item.id}})" >
+                <img class="card-img" ng-src="{{item.img}}">
+                <div class="head-title">
+                    {{item.title}}
+                </div>
+                <div>
+                    <img style="float: left;height: 20px;width: 20px; right: ;" ng-src="{{item.state_img}}">
+                </div>
+            </div>
+            <!--概况标题具体内容-->
+            <div class="item item-text-wrap" ng-if="!item.state">
+                <div  class="item item-text-wrap" border="1" ng-repeat="item in tableInfo">
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行人员：</div>
+                        <div class="tableInfo-title">{{item.name}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行机构：</div>
+                        <div class="tableInfo-title">{{item.org}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行结果：</div>
+                        <div class="tableInfo-title">{{item.result}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行时间：</div>
+                        <div class="tableInfo-title">{{item.time}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name" style="width: 82px;">耗时(小时)：</div>
+                        <div class="tableInfo-title">{{item.consuming}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行状态：</div>
+                        <div class="tableInfo-title">{{item.state}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行进度：</div>
+                        <div class="tableInfo-title">{{item.speed}}</div>
+                    </div>
+                    <div class="tableInfo-div">
+                        <div class="tableInfo-name">执行意见：</div>
+                        <div class="tableInfo-title">{{item.opinion}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-slide>

@@ -1,0 +1,150 @@
+#backlogList {
+    background: white;
+    -webkit-transition-property: opacity, top;
+    transition-property: opacity, top;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-animation: pop .3s forwards;
+    animation: pop .3s forwards;
+}
+#backlogList .scroll{
+    background-color:#f0f0f0;
+}
+#backlogList .backlog-item{
+    display: flex;
+    height: 112px;
+    width: 96%;
+    border:solid;
+    border-color: #EEEEEE;
+    border-width: 1px;
+    padding:0px;
+    margin-left:7px;
+    margin-top:7px;
+}
+#backlogList .backlog-item-up-div{
+    height:85px;
+    width:100%;
+    border-bottom-width:2px;
+    border-bottom-color:#f0f0f0;
+}
+
+#backlogList .backlog-item-important-div{
+    position:absolute;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+#backlogList .backlog-item-important-img{
+    width: 20px;
+    height: 20px;
+    background-color:#ffffff;
+}
+
+#backlogList .backlog-item-img-left{
+    position:absolute;
+    top: 8px;
+    left:14px;
+    width: 57px;
+    height: 57px;
+    border-color: #d6d6d6;
+    border:1px;
+    box-shadow: 1px 1px 5px 1px #E8E8E8;
+    border-radius:3px;
+    text-align: center;
+}
+
+#backlogList .backlog-item-img-left img{
+    width: 45px;
+    height: 45px;
+    margin-top:7px;
+}
+
+#backlogList .backlogContent{
+    width: 50%;
+    position:absolute;
+    top: 10px;
+    left:83px;
+}
+
+#backlogList .backlogContent .backlog-item-title{
+    font-size: 13px;
+    width: 95%;
+    color: #1A1A1A;
+    height:40px;
+    display:block;
+    white-space:pre-wrap;
+    overflow:hidden;
+}
+
+#backlogList .backlogContent .backlog-item-text{
+    display:block;
+    width: 95%;
+    font-size: 11px;
+    color: #999999;
+    overflow:hidden;
+}
+
+#backlogList .backlogContent .backlog-item-name-xt{
+    color: #0c93e1;
+}
+#backlogList .backlogContent .backlog-item-name-yx{
+    color: #02cb94;
+}
+#backlogList .backlogContent .backlog-item-name-kh{
+    color: #fbc31f;
+}
+ #backlogList .backlogProgress{
+     float:right;
+ }
+
+#backlogList .backlogProgress .backlogProgressText{
+    position:absolute;
+    top:58px;
+    right:5px;
+    font-size:9px;
+    color:#666666;
+}
+
+#backlogList .backlog-item-down-div{
+    height:27px;
+    width:100%;
+    border-top:2px solid #f0f0f0;
+    position:absolute;
+    top:85px;
+    left:0px;
+}
+
+#backlogList .backlog-item-down-left{
+    width:50%;
+    text-align:center;
+    line-height: 23px;
+    float:left;
+    font-size:10px;
+    color:#333333;
+    border-right:2px solid #f0f0f0;
+}
+
+#backlogList .backlog-item-down-right{
+    width:50%;
+    float:left;
+    text-align:center;
+    line-height: 23px;
+    font-size:10px;
+    color:#333333;
+}
+
+#backlogList .btn-reset{
+    color: #FBC31F;
+    font-size:18px;
+    width: 50%;
+    background-color: #6a3906;
+}
+
+#backlogList .btn-ok{
+    color: #6a3906;
+    font-size: 18px;
+    background-color: #eeb81a;
+    width: 50%;
+    left: 50%;
+}

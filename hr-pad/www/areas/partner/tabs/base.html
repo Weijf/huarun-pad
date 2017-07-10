@@ -1,0 +1,13 @@
+<ion-content id="partnerInfoChild" ng-controller="partnerInfoCtrl">
+    <ion-list class="partner-base-info-list">
+        <ion-item class="partner-base-item" ng-repeat="basic in basics">
+            <div class="partner-base-info">
+                <label>{{basic.label}}:</label>
+                <em>{{basic.info}}</em>
+            </div>
+        </ion-item>
+        <ion-item class="partner-base-item" >
+        </ion-item>
+    </ion-list>
+
+</ion-content>

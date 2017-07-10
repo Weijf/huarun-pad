@@ -1,0 +1,18 @@
+<ion-content id="companyCustomerInfoChild" ng-controller="companyCustomerInfoCtrl">
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in evaluates">
+            <div class="cus-basic-info">
+                <em>不良评价描述:</em>
+                <em>{{info.desc}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>不良信用发生日期:</em>
+                <em>{{info.date}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>不良信用发生原因:</em>
+                <em>{{info.reason}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

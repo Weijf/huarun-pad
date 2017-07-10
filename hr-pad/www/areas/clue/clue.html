@@ -1,0 +1,67 @@
+<ion-view id="clue" view-title="线索查询页" cache-view="true">
+
+    <ion-side-menus>
+
+        <!--题头-->
+        <ion-header-bar align-title="center" class="bar-energized header-bar" id="header-bar">
+            <button ng-click="goBack()" class="button button-icon ion-ios-arrow-left" style="color: #FFFFFF;"></button>
+            <h1 class="title" style="color: #FFFFFF;">{{title}}</h1>
+            <button menu-toggle="right" class="button button-icon ion-ios-search" style="color: #FFFFFF;"></button>
+        </ion-header-bar>
+
+        <!-- 中间内容 -->
+        <ion-side-menu-content ng-controller="ClueCtrl">
+
+            <ion-content>
+                <div class="list" ng-repeat="item in items" ng-click="show_info({{item.id}})">
+                    <label class="item item-input">
+                        <span class="input-label">{{til1}}：</span>
+                        <div>{{item.title}}</div>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">{{til2}}：</span>
+                        <div>{{item.person}}</div>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">{{til3}}：</span>
+                        <div>{{item.org}}</div>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">{{til4}}：</span>
+                        <div>{{item.state}}</div>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">{{til5}}：</span>
+                        <div>{{item.time}}</div>
+                    </label>
+                </div>
+            </ion-content>
+
+        </ion-side-menu-content>
+
+        <!-- 左侧菜单 -->
+        <!--<ion-side-menu side="left">
+            left
+        </ion-side-menu>-->
+
+        <!-- 右侧菜单 -->
+        <ion-side-menu side="right" class="right-div">
+            <ion-content class="has-header">
+                <div class="list right-list">
+                    <label class="item item-input right-item">
+                        <span class="input-label" style="font-size: 15px;">{{search1}}：</span>
+                        <input type="text" style="font-size: 15px; text-align:right" placeholder="请输入{{search1}}">
+                    </label>
+                    <label class="item item-input right-item">
+                        <span class="input-label" style="font-size: 15px;">{{search2}}：</span>
+                        <input type="text" style="font-size: 15px; text-align:right" placeholder="请输入{{search2}}">
+                    </label>
+                </div>
+            </ion-content>
+            <div class="right-padding">
+                <button class="button right-button" style="background-color: #E6F9FF; color: #01B0E9;">重　置</button>
+                <button class="button right-button" style="left: 50%; background-color: #01B0E9; color: #FFFFFF;">确　定</button>
+            </div>
+        </ion-side-menu>
+    </ion-side-menus>
+</ion-view>

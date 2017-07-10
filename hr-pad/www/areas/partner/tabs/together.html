@@ -1,0 +1,22 @@
+<ion-content id="partnerInfoChild" ng-controller="partnerInfoCtrl">
+    <ion-list>
+        <ion-item class="partner-basic-info-item" ng-repeat="info in togethers" ng-click="showTogetherInfo(info)">
+            <div class="partner-basic-info">
+                <em>合作事由:</em>
+                <em>{{info.reason}}</em>
+            </div>
+            <div class="partner-basic-info">
+                <em>合作时间:</em>
+                <em>{{info.date}}</em>
+            </div>
+            <div class="partner-basic-info">
+                <em>对接部门:</em>
+                <em>{{info.dept}}</em>
+            </div>
+            <div class="partner-basic-info">
+                <em>对接人员:</em>
+                <em>{{info.person}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

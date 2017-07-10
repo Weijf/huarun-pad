@@ -1,0 +1,34 @@
+<ion-content id="companyCustomerInfoChild" ng-controller="companyCustomerInfoCtrl">
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in relations">
+            <div class="cus-basic-info">
+                <em>联系人类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>联系人名称:</em>
+                <em>{{info.name}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>电话:</em>
+                <em>{{info.tel}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>电子邮箱:</em>
+                <em>{{info.email}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>证件类型:</em>
+                <em>{{info.cardType}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>证件号码:</em>
+                <em>{{info.cardNO}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>关联人职务:</em>
+                <em>{{info.relationJob}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

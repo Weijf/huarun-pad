@@ -1,0 +1,38 @@
+<ion-content id="companyCustomerInfoChild" ng-controller="companyCustomerInfoCtrl">
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in managerTeams">
+            <div class="cus-basic-info">
+                <em>管理对象类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>管理对象名称:</em>
+                <em>{{info.name}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>管理对象编号:</em>
+                <em>{{info.no}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>关系类型:</em>
+                <em>{{info.rType}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>管理业务类型:</em>
+                <em>{{info.bType}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>所属机构名称:</em>
+                <em>{{info.unitName}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>所属部门名称:</em>
+                <em>{{info.deptName}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>联系电话:</em>
+                <em>{{info.tel}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

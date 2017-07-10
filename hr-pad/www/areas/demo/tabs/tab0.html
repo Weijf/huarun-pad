@@ -1,0 +1,11 @@
+<ion-content>
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="item in items" ng-bind="item.name"></ion-item>
+        </ion-list>
+        <ion-infinite-scroll ng-if="!finite_state" on-infinite="loadMore()" distance="30%">
+        </ion-infinite-scroll>
+        <!--<div style="height: 47px;width: 100%;"></div>-->
+    </ion-content>
+</ion-content>

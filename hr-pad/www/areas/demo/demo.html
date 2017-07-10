@@ -1,0 +1,109 @@
+<ion-view id="demo" view-title="模型页面" cache-view="false" ng-controller="DemoCtrl">
+
+    <ion-side-menus>
+
+        <!--题头-->
+        <ion-header-bar align-title="center" class="bar-calm" id="header-bar">
+            <button class="button button-icon ion-ios-arrow-left" ng-click="goBack()"></button>
+            <h1 class="title">{{title}}</h1>
+            <button class="button button-icon ion-search" menu-toggle="right"></button>
+        </ion-header-bar>
+
+        <!-- 中间内容 -->
+        <ion-side-menu-content>
+
+            <!--下拉刷新-->
+            <!--<ion-content>
+                <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+                <ion-list>
+                    <ion-item ng-repeat="item in items" ng-bind="item.name"></ion-item>
+                </ion-list>
+            </ion-content>-->
+            <ion-content>
+                <!--横拉-->
+                <ion-scroll zooming="false" show-pager="false" direction="x" class="scroll-div">
+                    <div class="scroll-list">
+                        <a class="scroll-a {{items.class}}" ng-repeat="items in itemList" id="{{items.id}}" ng-click="show_slide(items.id)">
+                            {{items.name}}
+                        </a>
+                    </div>
+                </ion-scroll>
+                <ion-slide-box active-slide="last" on-slide-changed="slideHasChanged($index)">
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab0.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab1.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab2.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab3.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab4.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab5.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab6.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab7.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab8.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab9.html'">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div ng-include="'areas/demo/tabs/tab10.html'">
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </ion-content>
+        </ion-side-menu-content>
+
+        <!-- 左侧菜单 -->
+        <ion-side-menu side="left">
+            <ion-content class="has-header">
+                <ion-list>
+                    <ion-item nav-clear menu-close href="#/app/search">
+                        left-Search
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+
+        <!-- 右侧菜单 -->
+        <ion-side-menu side="right">
+            <ion-content class="has-header">
+                <ion-list>
+                    <ion-item nav-clear menu-close href="#/app/search">
+                        Search
+                    </ion-item>
+                    <ion-item nav-clear menu-close href="#/app/browse">
+                        Browse
+                    </ion-item>
+                    <ion-item nav-clear menu-close href="#/app/playlists">
+                        Playlists
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+
+</ion-view>

@@ -1,0 +1,38 @@
+#partnerList {
+    background: white;
+    -webkit-transition-property: opacity, top;
+    transition-property: opacity, top;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-animation: pop .3s forwards;
+    animation: pop .3s forwards;
+}
+#partnerList .partner-item {
+    height: auto;
+    width: 100%;
+    white-space: normal;
+    padding: 10px 0px 0px 20px;
+}
+#partnerList .partnerItemInfo {
+    height: auto;
+    width: 100%;
+    white-space: normal;
+    padding-bottom: 15px;
+}
+#partnerList .partnerItemInfo em{
+    font-size:14px;
+    color:#4d4d4d;
+}
+#partnerList .btn-reset{
+    color: #FBC31F;
+    font-size:18px;
+    width: 50%;
+    background-color: #6a3906;
+}
+#partnerList .btn-ok{
+    color: #6a3906;
+    font-size: 18px;
+    background-color: #eeb81a;
+    width: 50%;
+    left: 50%;
+}

@@ -1,0 +1,74 @@
+<ion-content id="personCustomerInfoChild">
+    <div class="second_title">
+        <span class="label">地址联系信息</span>
+    </div>
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in relationA">
+            <div class="cus-basic-info">
+                <em>地址类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>国家:</em>
+                <em>{{info.country}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>省:</em>
+                <em>{{info.sheng}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>市:</em>
+                <em>{{info.city}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>区（县）:</em>
+                <em>{{info.qx}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>详细地址:</em>
+                <em>{{info.address}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>邮政编码:</em>
+                <em>{{info.zipCode}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+    <div class="second_title">
+        <span class="label">电话地址联系信息</span>
+    </div>
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in relationB">
+            <div class="cus-basic-info">
+                <em>电话类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>国内区号:</em>
+                <em>{{info.QH}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>电话号码:</em>
+                <em>{{info.tel}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+    <div class="second_title">
+        <span class="label">电子地址联系信息</span>
+    </div>
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in relationC">
+            <div class="cus-basic-info">
+                <em>电子地址类型:</em>
+                <em>{{info.type}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>电子地址信息:</em>
+                <em>{{info.address}}</em>
+            </div>
+        </ion-item>
+        <ion-item class=""  style="height: 46px;border-width: 0px;background-color: #f0f0f0">
+
+        </ion-item>
+    </ion-list>
+</ion-content>

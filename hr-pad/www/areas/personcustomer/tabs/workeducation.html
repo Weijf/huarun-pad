@@ -1,0 +1,71 @@
+<ion-content id="personCustomerInfoChild">
+    <div class="second_title">
+        <span class="label">工作情况</span>
+    </div>
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in works">
+            <div class="cus-basic-info">
+                <em>工作经历起始日期:</em>
+                <em>{{info.sDate}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>工作经历结束日期:</em>
+                <em>{{info.eDate}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>是否现工作单位:</em>
+                <em>{{info.isNow}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>所属行业:</em>
+                <em>{{info.trade}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>工作单位名称:</em>
+                <em>{{info.unitName}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>工作单位性质:</em>
+                <em>{{info.unitNature}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>职务描述:</em>
+                <em>{{info.jobDesc}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>工作经历描述:</em>
+                <em>{{info.desc}}</em>
+            </div>
+        </ion-item>
+    </ion-list>
+    <div class="second_title">
+        <span class="label">教育背景</span>
+    </div>
+    <ion-list>
+        <ion-item class="cus-basic-info-item" ng-repeat="info in edcutions">
+            <div class="cus-basic-info">
+                <em>教育开始时间:</em>
+                <em>{{info.sDate}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>教育结束时间:</em>
+                <em>{{info.eDate}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>院方名称:</em>
+                <em>{{info.school}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>学历:</em>
+                <em>{{info.xl}}</em>
+            </div>
+            <div class="cus-basic-info">
+                <em>专业:</em>
+                <em>{{info.zy}}</em>
+            </div>
+        </ion-item>
+        <ion-item class=""  style="height: 46px;border-width: 0px;background-color: #f0f0f0">
+
+        </ion-item>
+    </ion-list>
+</ion-content>

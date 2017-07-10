@@ -1,0 +1,78 @@
+#companyCustomerList {
+    background: white;
+    -webkit-transition-property: opacity, top;
+    transition-property: opacity, top;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-animation: pop .3s forwards;
+    animation: pop .3s forwards;
+}
+
+#companyCustomerList .cus-item{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    border:solid;
+    border-color: #EEEEEE;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    padding:0px;
+    margin-bottom:15px;
+}
+
+#companyCustomerList .cus-item-img-left{
+    position:absolute;
+    top: 25px;
+    left:18px;
+    width: 65px;
+    height: 65px;
+    border-color: #d6d6d6;
+    border:1px;
+    box-shadow: 1px 1px 5px 1px #E8E8E8;
+    border-radius:3px;
+    text-align: center;
+}
+
+#companyCustomerList .cus-item-img-left img{
+    width: 50px;
+    height: 50px;
+    margin-top:7px;
+}
+#companyCustomerList .cusItem{
+    width: 85%;
+    position:absolute;
+    top: 17px;
+    left:94px;
+}
+
+#companyCustomerList .cusItem span{
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width: 82%;
+    font-size: 12px;
+    color: #999999;
+    margin-top: 1px;
+}
+
+#companyCustomerList .cusItem .cus-item-title{
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 2px;
+}
+
+#companyCustomerList .btn-reset{
+    color: #FBC31F;
+    font-size:18px;
+    width: 50%;
+    background-color: #6a3906;
+}
+
+#companyCustomerList .btn-ok{
+    color: #6a3906;
+    font-size: 18px;
+    background-color: #eeb81a;
+    width: 50%;
+    left: 50%;
+}
